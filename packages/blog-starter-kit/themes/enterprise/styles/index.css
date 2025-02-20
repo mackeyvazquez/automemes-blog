@@ -52,7 +52,7 @@
 
 .dark html,
 .dark body {
-	background-color: #020817;
+	@apply bg-background font-sans  antialiased selection:bg-lime-200 selection:text-gray-800;
 }
 
 [data-node-type='callout'] {
