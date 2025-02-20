@@ -75,7 +75,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 				coverImage={post.coverImage?.url || DEFAULT_COVER}
 				date={post.publishedAt}
 				slug={post.slug}
-				excerpt={post.brief}
+				excerpt={post.subtitle || post.brief}
 			/>
 		);
 	});
@@ -145,7 +145,7 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 									coverImage={firstPost.coverImage?.url || DEFAULT_COVER}
 									date={firstPost.publishedAt}
 									slug={firstPost.slug}
-									excerpt={firstPost.brief}
+									excerpt={firstPost.subtitle || firstPost.brief}
 								/>
 							)}
 						</div>
