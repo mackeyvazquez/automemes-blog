@@ -26,7 +26,7 @@ export const MorePosts = ({ posts, context }: Props) => {
 							profilePicture: post.author.profilePicture,
 						}}
 						slug={post.slug}
-						excerpt={post.brief}
+						excerpt={post.subtitle || post.brief}
 					/>
 				))}
 			</div>
