@@ -49,20 +49,22 @@ export default function Post({ series, publication, posts }: Props) {
 								dangerouslySetInnerHTML={{ __html: series.description?.html ?? '' }}
 							></div>
 						</div>
-						<div className="relative col-span-full md:col-span-2 lg:col-span-1">
-							<CoverImage
-								title={series.name}
-								src={resizeImage(
-									series.coverImage,
-									{
-										w: 400,
-										h: 210,
-										c: 'thumb',
-									},
-									DEFAULT_COVER,
-								)}
-							/>
-						</div>
+						{series.coverImage && (
+							<div className="relative col-span-full md:col-span-2 lg:col-span-1">
+								<CoverImage
+									title={series.name}
+									src={resizeImage(
+										series.coverImage,
+										{
+											w: 400,
+											h: 210,
+											c: 'thumb',
+										},
+										DEFAULT_COVER,
+									)}
+								/>
+							</div>
+						)}
 					</div>
 					{posts.length > 0 ? (
 						<MorePosts context="series" posts={posts} />
