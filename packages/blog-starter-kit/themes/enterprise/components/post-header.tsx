@@ -34,7 +34,7 @@ export const PostHeader = ({ title, coverImage, date, author, readTimeInMinutes 
 	return (
 		<>
 			<PostTitle>{title}</PostTitle>
-			<div className="flex w-full flex-row flex-wrap items-center justify-center gap-2 px-2 text-slate-700 md:px-0 dark:text-neutral-300">
+			<div className="flex w-full flex-row flex-wrap items-center justify-center gap-2 px-2 text-slate-700 md:px-0 dark:text-gray-300">
 				<div className="mb-5 flex w-full flex-row items-center justify-center md:mb-0 md:w-auto md:justify-start">
 					{authorsArray.map((coAuthor, index) => (
 						<div

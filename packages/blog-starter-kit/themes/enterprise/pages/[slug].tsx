@@ -57,7 +57,7 @@ const Post = ({ publication, post }: PostProps) => {
 		<li key={tag.id}>
 			<Link
 				href={`/tag/${tag.slug}`}
-				className="block rounded-full border px-2 py-1 font-medium hover:bg-slate-50 md:px-4 dark:border-neutral-800 dark:hover:bg-neutral-800"
+				className="block rounded-full border px-2 py-1 font-medium hover:bg-slate-50 md:px-4 dark:border-gray-800 dark:hover:bg-gray-800"
 			>
 				#{tag.slug}
 			</Link>
@@ -137,7 +137,7 @@ const Post = ({ publication, post }: PostProps) => {
 				post.features?.tableOfContents?.items?.length > 0 && <PostTOC />}
 			<MarkdownToHtml contentMarkdown={post.content.markdown} />
 			{(post.tags ?? []).length > 0 && (
-				<div className="mx-auto w-full px-5 text-slate-600 md:max-w-screen-md dark:text-neutral-300">
+				<div className="mx-auto w-full px-5 text-slate-600 md:max-w-screen-md dark:text-gray-300">
 					<ul className="flex flex-row flex-wrap items-center gap-2">{tagsList}</ul>
 				</div>
 			)}

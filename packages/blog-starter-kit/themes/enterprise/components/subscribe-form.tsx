@@ -47,7 +47,7 @@ export const SubscribeForm = () => {
 						ref={inputRef}
 						type="email"
 						placeholder="john@doe.com"
-						className="dark:bg-background left-3 top-3 w-full rounded-md p-3 text-base text-black outline-none dark:border dark:border-[#374B6D] dark:text-neutral-50"
+						className="dark:bg-background left-3 top-3 w-full rounded-md p-3 text-base text-black outline-none dark:border dark:border-[#374B6D] dark:text-gray-50"
 					/>
 					<button
 						disabled={requestInProgress}
@@ -61,7 +61,7 @@ export const SubscribeForm = () => {
 			{status === 'PENDING' && (
 				<div className="relative w-full p-2 text-center">
 					<p className="font-bold text-lime-200 dark:text-lime-200">Almost there!</p>
-					<p className="font-medium text-slate-600 dark:text-neutral-300">
+					<p className="font-medium text-slate-600 dark:text-gray-300">
 						Check your inbox for a confirmation email and click{' '}
 						<strong>&quot;Confirm and Subscribe&quot;</strong> to complete your subscription. Thanks
 						for joining us!

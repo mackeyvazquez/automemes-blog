@@ -20,7 +20,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 		switch (type) {
 			case 'outline':
 				buttonClassName =
-					'text-slate-950 bg-transparent dark:border-neutral-800 hover:bg-slate-100 dark:bg-transparent dark:hover:bg-neutral-800 dark:text-white';
+					'text-slate-950 bg-transparent dark:border-gray-800 hover:bg-slate-100 dark:bg-transparent dark:hover:bg-gray-800 dark:text-white';
 				break;
 
 			case 'primary':
@@ -30,7 +30,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 
 			case 'outline-dark':
 				buttonClassName =
-					'text-white bg-transparent hover:bg-white hover:text-black dark:bg-neutral-900 dark:text-white';
+					'text-white bg-transparent hover:bg-white hover:text-black dark:bg-gray-900 dark:text-white';
 				break;
 
 			default:

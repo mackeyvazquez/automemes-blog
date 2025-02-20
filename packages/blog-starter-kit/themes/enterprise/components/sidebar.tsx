@@ -41,7 +41,7 @@ function PublicationSidebar(props: Props) {
 					className={`${
 						// When the sheet is mounted, we want to slide it in from the left.
 						!isMounted ? '-translate-x-96' : 'translate-x-0'
-					} dark:bg-background fixed bottom-0 left-0 top-0 z-50 flex w-80 transform flex-col bg-white shadow-2xl duration-300 ease-out dark:border-neutral-800`}
+					} dark:bg-background fixed bottom-0 left-0 top-0 z-50 flex w-80 transform flex-col bg-white shadow-2xl duration-300 ease-out dark:border-gray-800`}
 				>
 					<div className="blog-sidebar-header w-full shrink-0 py-6">
 						<div className="flex items-center justify-between pl-8 pr-4">
@@ -54,7 +54,7 @@ function PublicationSidebar(props: Props) {
 									type="outline"
 									label=""
 									icon={<CloseSVG className="h-5 w-5 fill-current" />}
-									className="rounded-xl !border-transparent !px-3 !py-2 hover:bg-neutral-800 dark:text-white"
+									className="rounded-xl !border-transparent !px-3 !py-2 hover:bg-gray-800 dark:text-white"
 									onClick={() => {
 										toggleSidebar();
 									}}
@@ -72,7 +72,7 @@ function PublicationSidebar(props: Props) {
 								<li>
 									<Link
 										href="/"
-										className="transition-200 block truncate text-ellipsis whitespace-nowrap rounded p-2 px-3 transition-colors hover:bg-slate-100 hover:text-black dark:hover:bg-neutral-800 dark:hover:text-white"
+										className="transition-200 block truncate text-ellipsis whitespace-nowrap rounded p-2 px-3 transition-colors hover:bg-slate-100 hover:text-black dark:hover:bg-gray-800 dark:hover:text-white"
 									>
 										Home
 									</Link>
@@ -81,7 +81,7 @@ function PublicationSidebar(props: Props) {
 									<li key={item.url}>
 										<Link
 											href={item.url}
-											className="transition-200 block truncate text-ellipsis whitespace-nowrap rounded p-2 px-3 transition-colors hover:bg-slate-100 hover:text-black dark:hover:bg-neutral-800 dark:hover:text-white"
+											className="transition-200 block truncate text-ellipsis whitespace-nowrap rounded p-2 px-3 transition-colors hover:bg-slate-100 hover:text-black dark:hover:bg-gray-800 dark:hover:text-white"
 										>
 											{item.label}
 										</Link>
