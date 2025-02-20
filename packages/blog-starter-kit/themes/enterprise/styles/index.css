@@ -54,3 +54,7 @@
 .dark body {
 	background-color: #020817;
 }
+
+[data-node-type='callout'] {
+	@apply bg-background;
+}
