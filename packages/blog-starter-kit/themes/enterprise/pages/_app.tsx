@@ -1,3 +1,4 @@
+import { ThemeProvider } from 'next-themes';
 import { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import '../styles/index.css';
@@ -11,5 +12,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 			i.style.height = `${parseInt(newHeight)}px`;
 		};
 	}, []);
-	return <Component {...pageProps} />;
+	return (
+		<ThemeProvider defaultTheme="dark" attribute="class" forcedTheme="dark">
+			<Component {...pageProps} />
+		</ThemeProvider>
+	);
 }

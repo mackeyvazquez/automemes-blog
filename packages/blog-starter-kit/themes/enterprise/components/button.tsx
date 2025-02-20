@@ -20,12 +20,12 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 		switch (type) {
 			case 'outline':
 				buttonClassName =
-					'text-slate-950 bg-transparent dark:border-neutral-800 hover:bg-slate-50 dark:bg-transparent dark:hover:bg-neutral-800 dark:text-white';
+					'text-slate-950 bg-transparent dark:border-neutral-800 hover:bg-slate-100 dark:bg-transparent dark:hover:bg-neutral-800 dark:text-white';
 				break;
 
 			case 'primary':
 				buttonClassName =
-					'text-white bg-primary-600 hover:bg-primary-500 border-primary-600 dark:bg-primary-600 dark:text-white';
+					'text-white bg-primary-900 hover:bg-primary-900 hover:bg-opacity-90 hover:border-primary-900';
 				break;
 
 			case 'outline-dark':
@@ -35,7 +35,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 
 			default:
 				buttonClassName =
-					'text-white bg-primary-600 hover:bg-primary-500 border-primary-600 dark:bg-primary-600 dark:text-white';
+					'text-white bg-primary-900 hover:bg-primary-900 hover:bg-opacity-90 border-primary-900 dark:bg-primary-600 dark:text-white';
 		}
 
 		if (as === 'a') {
@@ -44,7 +44,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 					href={href}
 					rel={rel}
 					target={target}
-					className={`flex flex-row items-center justify-start gap-2 rounded-full border px-2 py-2 text-sm font-semibold transition-colors duration-200 md:px-5 md:py-3 md:text-base ${buttonClassName} ${
+					className={`flex flex-row items-center justify-start rounded-md px-4 py-2 text-sm font-semibold transition-colors duration-200 md:px-5 md:py-3 md:text-base ${buttonClassName} ${
 						secondaryIcon ? `md:justify-between` : `md:justify-center`
 					}  ${className}`}
 				>
@@ -61,7 +61,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>(
 			<button
 				ref={ref}
 				onClick={onClick}
-				className={`flex flex-row items-center justify-start gap-2 rounded-full border px-2 py-2 text-sm font-semibold transition-colors duration-200 md:px-5 md:py-3 md:text-base ${buttonClassName} ${
+				className={`flex flex-row items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-semibold transition-colors duration-200 md:px-5 md:py-3 md:text-base ${buttonClassName} ${
 					secondaryIcon ? `md:justify-between` : `md:justify-center`
 				}  ${className}`}
 			>
