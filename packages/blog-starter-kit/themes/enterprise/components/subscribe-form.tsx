@@ -42,17 +42,17 @@ export const SubscribeForm = () => {
 	return (
 		<>
 			{!status && (
-				<div className="dark:bg-background relative w-full rounded-md bg-white p-2">
+				<div className=" relative w-full rounded-md  p-2">
 					<input
 						ref={inputRef}
 						type="email"
 						placeholder="john@doe.com"
-						className="dark:bg-background left-3 top-3 w-full rounded-md p-3 text-base text-black outline-none dark:border dark:border-[#374B6D] dark:text-gray-50"
+						className="dark:bg-background left-3 top-3 w-full rounded-md p-3 text-base text-black outline-none dark:border dark:border-gray-400 dark:text-gray-50"
 					/>
 					<button
 						disabled={requestInProgress}
 						onClick={subscribe}
-						className="bg-primary-900 dark:text-background absolute right-3 top-3 rounded-md px-3 py-2 text-white disabled:cursor-not-allowed disabled:opacity-80 dark:bg-lime-200"
+						className="bg-primary-900 dark:text-background hover:dark:bg-primary-200/90 absolute right-3 top-3 rounded-md px-3 py-2 text-white disabled:cursor-not-allowed disabled:opacity-80 dark:bg-lime-200"
 					>
 						Subscribe
 					</button>
