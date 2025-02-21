@@ -12,6 +12,22 @@ renderer.link = function (href, title, text) {
 		return `<div class="text-center"><a href="${href}" class="custom-button" target='_blank' rel='noopener noreferrer'>${buttonText}</a></div>`;
 	}
 
+	if (text.startsWith('iframe: YouTube')) {
+		return `
+			<div class="flex justify-center">
+				<iframe
+					width="560" height="315" 
+					src="https://www.youtube.com/embed/${href}?rel=0&autoplay=0&modestbranding=1&showinfo=0" 
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen
+				>
+				</iframe>
+			</div>
+		  `;
+	}
+
 	var link = marked.Renderer.prototype.link.call(this, href, title, text);
 	var linkIsUserMention =
 		title &&
