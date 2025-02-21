@@ -58,3 +58,7 @@
 [data-node-type='callout'] {
 	@apply bg-background;
 }
+
+a.custom-button {
+	@apply ring-offset-background  hover:bg-primary-200/90 inline-flex h-10 w-full items-center justify-center gap-2 whitespace-nowrap rounded-md bg-lime-200 px-4 py-2 text-sm font-medium  hover:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 sm:w-60 dark:text-black;
+}

@@ -7,6 +7,11 @@ const imageReplacer = require('./image').imageReplacer;
 
 // @ts-ignore
 renderer.link = function (href, title, text) {
+	if (text.startsWith('button:')) {
+		const buttonText = text.replace('button:', '').trim();
+		return `<div class="text-center"><a href="${href}" class="custom-button" target='_blank' rel='noopener noreferrer'>${buttonText}</a></div>`;
+	}
+
 	var link = marked.Renderer.prototype.link.call(this, href, title, text);
 	var linkIsUserMention =
 		title &&
