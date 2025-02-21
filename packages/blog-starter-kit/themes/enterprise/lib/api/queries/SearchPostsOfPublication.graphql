@@ -6,6 +6,7 @@ query SearchPostsOfPublication($first: Int!, $filter: SearchPostsOfPublicationFi
 				id
 				brief
 				title
+				subtitle
 				cuid
 				slug
 				coverImage {

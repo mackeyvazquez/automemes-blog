@@ -82,7 +82,9 @@ export const Search = () => {
 				<div className="flex flex-col gap-1">
 					<strong className="text-base">{post.title}</strong>
 					<span className="text-slate-600 dark:text-gray-300">
-						{post.brief.length > 140 ? post.brief.substring(0, 140) + '…' : post.brief}
+						{post.subtitle && post.subtitle.length > 140
+							? post.subtitle.substring(0, 140) + '…'
+							: post.subtitle}
 					</span>
 				</div>
 				<div className="w-56">
